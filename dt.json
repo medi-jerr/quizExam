@@ -1,0 +1,253 @@
+{
+  "topics": [
+    {
+      "nm_of_questions": "3",
+      "duration": "1",
+      "name": "exam1",
+      "id": 1696790697431,
+      "students": [
+        1697026730599,
+        1697102371218,
+        22
+      ],
+      "questions": [
+        {
+          "id": 0,
+          "text": "Who wrote the play \"Romeo and Juliet\"?",
+          "options": [
+            " Charles Dickens",
+            "William Shakespeare",
+            "Jane Austen",
+            "Mark Twain"
+          ],
+          "correctAnswer": "William Shakespeare"
+        },
+        {
+          "id": 1,
+          "text": "Which planet is known as the \"Red Planet\"?",
+          "options": [
+            "Venus",
+            "Jupiter",
+            "Mars",
+            "Saturn"
+          ],
+          "correctAnswer": "Jupiter"
+        },
+        {
+          "id": 2,
+          "text": "What is the capital of France?",
+          "options": [
+            "London",
+            "Berlin",
+            "Madrid",
+            "Paris"
+          ],
+          "correctAnswer": "Paris"
+        }
+      ]
+    },
+    {
+      "name": "exam2",
+      "duration": "11",
+      "nm_of_questions": "1",
+      "id": 1697100082818,
+      "questions": [
+        {
+          "id": 0,
+          "text": "fdssdddddd",
+          "options": [
+            "gee",
+            "resd"
+          ],
+          "correctAnswer": "resd"
+        }
+      ],
+      "students": [
+        1697026730599,
+        11,
+        5
+      ]
+    },
+    {
+      "name": "exam3",
+      "duration": "1",
+      "nm_of_questions": "2",
+      "id": 1697100423753,
+      "questions": [
+        {
+          "id": 0,
+          "text": "who df",
+          "options": [
+            "dfsf",
+            "fgz"
+          ],
+          "correctAnswer": "fgz"
+        },
+        {
+          "id": 1,
+          "text": "htr",
+          "options": [
+            "ret",
+            "erte"
+          ],
+          "correctAnswer": "ret"
+        }
+      ],
+      "students": [
+        1696879906703,
+        1696864452311,
+        1697026730599,
+        11,
+        22
+      ]
+    },
+    {
+      "name": "exam4",
+      "duration": "1",
+      "nm_of_questions": "2",
+      "id": 1697188793407,
+      "questions": [
+        {
+          "id": 0,
+          "text": "what is the perspose of using react js",
+          "options": [
+            "not true",
+            "not true",
+            "true"
+          ],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 1,
+          "text": "who kills the president of",
+          "options": [
+            "true",
+            "not true",
+            "not true"
+          ],
+          "correctAnswer": "true"
+        }
+      ],
+      "students": [
+        1697102371218,
+        22
+      ]
+    },
+    {
+      "name": "exam 16",
+      "duration": "1",
+      "nm_of_questions": "2",
+      "id": 1697457169567,
+      "questions": [
+        {
+          "id": 0,
+          "text": "how to ",
+          "options": [
+            "true",
+            "false",
+            "false"
+          ],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 1,
+          "text": "how to two",
+          "options": [
+            "false",
+            "false",
+            "true"
+          ],
+          "correctAnswer": "true"
+        }
+      ],
+      "students": [
+        22
+      ]
+    },
+    {
+      "name": "zee",
+      "duration": "1",
+      "nm_of_questions": "2",
+      "id": 1697458168657,
+      "questions": [
+        {
+          "id": 0,
+          "text": "eeee",
+          "options": [
+            "e",
+            "ee"
+          ],
+          "correctAnswer": "e"
+        },
+        {
+          "id": 1,
+          "text": "rrrr",
+          "options": [
+            "rrr",
+            "r"
+          ],
+          "correctAnswer": "r"
+        }
+      ],
+      "students": [
+        22
+      ]
+    }
+  ],
+  "students": [
+    {
+      "name": "medi",
+      "password": "azerty",
+      "id": 1697102371218,
+      "scores": {
+        "exam1": {
+          "date": 1697026730599,
+          "note": "10%"
+        },
+        "exam2": {
+          "date": 1697026720599,
+          "note": "40%"
+        },
+        "exam3": {
+          "note": "50.00%",
+          "date": 1697188392525
+        }
+      }
+    },
+    {
+      "name": "khalid",
+      "password": "azer",
+      "id": 22,
+      "scores": {
+        "exam3": {
+          "note": "17%",
+          "date": 1697022030599
+        },
+        "exam4": {
+          "note": "28%",
+          "date": 169702603059
+        },
+        "exam5": {
+          "note": "60%",
+          "date": 1697026030599
+        },
+        "exam6": {
+          "note": "80%",
+          "date": 1697026033599
+        },
+        "exam1": {
+          "date": 1697215566598,
+          "note": "33.33%"
+        },
+        "exam 16": {
+          "date": 1697457288598,
+          "note": "50.00%"
+        },
+        "zee": {
+          "date": 1697458220947,
+          "note": "100.00%"
+        }
+      }
+    }
+  ]
+}
