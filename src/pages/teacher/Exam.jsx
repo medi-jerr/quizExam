@@ -1,15 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import React, { useEffect } from "react";
-import Layout from "../../components/Layout";
-
+import React from "react";
+import Layout from "../../components/common/Layout";
 import { useLocation } from "react-router-dom";
-
-import AccordionShape from "../../components/AccordionSh";
+import AccordionShape from "../../components/common/AccordionSh";
 
 function Exam() {
   const location = useLocation();
-
-  console.log(location.state.name);
 
   return (
     <Layout>

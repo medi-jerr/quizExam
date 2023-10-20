@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Button, Paper, Typography } from "@mui/material";
-import { pp, elment } from "../styledCore/popupStyle";
-import WaveImage from "../assets/wave.svg";
-import WaveImageT from "../assets/waveT.svg";
+import { pp, elment } from "../../styles/popupStyle";
+import WaveImage from "../../assets/wave.svg";
+import WaveImageT from "../../assets/waveT.svg";
 import { useTheme } from "@mui/material/styles";
-import { btn } from "../styledCore/buttonS";
+import { btn } from "../../styles/buttonS";
 import { useNavigate } from "react-router-dom";
 
 function PopupEnd({ score, username }) {
@@ -72,9 +72,9 @@ function PopupEnd({ score, username }) {
               marginTop: 1,
             }}
             variant="contained"
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/account")}
           >
-            Log out
+            Account
           </Button>
         </Box>
         <Box

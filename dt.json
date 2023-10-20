@@ -5,11 +5,7 @@
       "duration": "1",
       "name": "exam1",
       "id": 1696790697431,
-      "students": [
-        1697026730599,
-        1697102371218,
-        22
-      ],
+      "students": [1697026730599, 1697102371218, 22],
       "questions": [
         {
           "id": 0,
@@ -25,173 +21,91 @@
         {
           "id": 1,
           "text": "Which planet is known as the \"Red Planet\"?",
-          "options": [
-            "Venus",
-            "Jupiter",
-            "Mars",
-            "Saturn"
-          ],
+          "options": ["Venus", "Jupiter", "Mars", "Saturn"],
           "correctAnswer": "Jupiter"
         },
         {
           "id": 2,
           "text": "What is the capital of France?",
-          "options": [
-            "London",
-            "Berlin",
-            "Madrid",
-            "Paris"
-          ],
+          "options": ["London", "Berlin", "Madrid", "Paris"],
           "correctAnswer": "Paris"
         }
       ]
     },
     {
-      "name": "exam2",
-      "duration": "11",
-      "nm_of_questions": "1",
-      "id": 1697100082818,
-      "questions": [
-        {
-          "id": 0,
-          "text": "fdssdddddd",
-          "options": [
-            "gee",
-            "resd"
-          ],
-          "correctAnswer": "resd"
-        }
-      ],
-      "students": [
-        1697026730599,
-        11,
-        5
-      ]
-    },
-    {
-      "name": "exam3",
+      "name": "kal",
       "duration": "1",
       "nm_of_questions": "2",
-      "id": 1697100423753,
+      "id": 1697670975568,
       "questions": [
         {
           "id": 0,
-          "text": "who df",
-          "options": [
-            "dfsf",
-            "fgz"
-          ],
-          "correctAnswer": "fgz"
+          "text": "sdfsdq",
+          "options": ["qf", "qf"],
+          "correctAnswer": "qf"
+        },
+        {
+          "options": ["qfsf", "qsfqfd"],
+          "id": 1,
+          "text": "fqs",
+          "correctAnswer": "qfsf"
+        }
+      ],
+      "students": [22]
+    },
+    {
+      "name": "testing students choice",
+      "duration": "2",
+      "nm_of_questions": "2",
+      "id": 1697671214668,
+      "questions": [
+        {
+          "id": 0,
+          "text": "dfdfdf",
+          "options": ["dfdf", "fd", "df"],
+          "correctAnswer": "dfdf"
         },
         {
           "id": 1,
-          "text": "htr",
-          "options": [
-            "ret",
-            "erte"
-          ],
-          "correctAnswer": "ret"
+          "text": "dfdf",
+          "options": ["dfd", "ggg", "gg"],
+          "correctAnswer": "ggg"
         }
       ],
-      "students": [
-        1696879906703,
-        1696864452311,
-        1697026730599,
-        11,
-        22
-      ]
+      "students": [22, 1697102371218]
     },
     {
-      "name": "exam4",
-      "duration": "1",
-      "nm_of_questions": "2",
-      "id": 1697188793407,
+      "name": "jqsdjkd",
+      "duration": "3",
+      "nm_of_questions": "4",
+      "id": 1697671444834,
       "questions": [
         {
+          "options": ["dsg", "sdfg", "fdg"],
           "id": 0,
-          "text": "what is the perspose of using react js",
-          "options": [
-            "not true",
-            "not true",
-            "true"
-          ],
-          "correctAnswer": "true"
+          "text": "dfg",
+          "correctAnswer": "sdfg"
         },
         {
           "id": 1,
-          "text": "who kills the president of",
-          "options": [
-            "true",
-            "not true",
-            "not true"
-          ],
-          "correctAnswer": "true"
-        }
-      ],
-      "students": [
-        1697102371218,
-        22
-      ]
-    },
-    {
-      "name": "exam 16",
-      "duration": "1",
-      "nm_of_questions": "2",
-      "id": 1697457169567,
-      "questions": [
-        {
-          "id": 0,
-          "text": "how to ",
-          "options": [
-            "true",
-            "false",
-            "false"
-          ],
-          "correctAnswer": "true"
+          "text": "gfds",
+          "options": ["dfsg", "fgds", "fgsd"],
+          "correctAnswer": "fgds"
         },
         {
-          "id": 1,
-          "text": "how to two",
-          "options": [
-            "false",
-            "false",
-            "true"
-          ],
-          "correctAnswer": "true"
-        }
-      ],
-      "students": [
-        22
-      ]
-    },
-    {
-      "name": "zee",
-      "duration": "1",
-      "nm_of_questions": "2",
-      "id": 1697458168657,
-      "questions": [
-        {
-          "id": 0,
-          "text": "eeee",
-          "options": [
-            "e",
-            "ee"
-          ],
-          "correctAnswer": "e"
+          "options": ["dhfds", "sqdfsq", "dqsf"],
+          "id": 2,
+          "text": "gfge",
+          "correctAnswer": "dhfds"
         },
         {
-          "id": 1,
-          "text": "rrrr",
-          "options": [
-            "rrr",
-            "r"
-          ],
-          "correctAnswer": "r"
+          "options": ["dfsg", "fdg", "dsgf"],
+          "correctAnswer": "fdg",
+          "id": 3,
+          "text": "dfgs"
         }
       ],
-      "students": [
-        22
-      ]
+      "students": [1697102371218, 22]
     }
   ],
   "students": [
@@ -245,6 +159,18 @@
         },
         "zee": {
           "date": 1697458220947,
+          "note": "100.00%"
+        },
+        "kal": {
+          "date": 1697671273462,
+          "note": "50.00%"
+        },
+        "jqsdjkd": {
+          "date": 1697801562520,
+          "note": "25.00%"
+        },
+        "testing students choice": {
+          "date": 1697814818354,
           "note": "100.00%"
         }
       }

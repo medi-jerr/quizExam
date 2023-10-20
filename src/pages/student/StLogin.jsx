@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import LogAndRegister from "../../components/LogAndRegister";
+import LogAndRegister from "../../components/auth";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../../functions/UserContext";
+import { useUser } from "../../contexts/UserContext";
 
 function StLogin() {
   const [students, setStudents] = useState([]);
@@ -20,18 +20,21 @@ function StLogin() {
       if (!user) {
         setMessageOfNotExist(true);
       } else {
+        sessionStorage.setItem("user", JSON.stringify(user));
         setUser(user);
         navigate("/account");
       }
     }
   }, [students, authInfo]);
 
-  const callbackFun = async (authIfo) => {
+  const callbackFun = async (e, authIfo) => {
+    e.preventDefault();
     setAuthInfo(authIfo);
+
     await getTheUserFromDb(authIfo);
   };
   const getTheUserFromDb = () => {
-    axios.get("http://localhost:5000/students").then((res) => {
+    axios.get(process.env.REACT_APP_STUDENTS).then((res) => {
       setStudents(res.data);
     });
   };

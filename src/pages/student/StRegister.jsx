@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import LogAndRegister from "../../components/LogAndRegister";
+import LogAndRegister from "../../components/auth";
 import axios from "axios";
 import validationSchema from "../../functions/validationSch";
-import { useId } from "react";
 import { useNavigate } from "react-router-dom";
 
 function StRegister() {
@@ -15,7 +14,7 @@ function StRegister() {
       .validate(ob, { abortEarly: false })
       .then(() => {
         axios
-          .post("http://localhost:5000/students", { ...ob, id: Date.now() })
+          .post(process.env.REACT_APP_STUDENTS, { ...ob, id: Date.now() })
           .then((res) => console.log(res.data))
           .catch((er) => console.log(er.massage));
 
@@ -32,7 +31,7 @@ function StRegister() {
         setSubmitted(false);
       });
   };
-  console.log(errors);
+
   return (
     <>
       <LogAndRegister

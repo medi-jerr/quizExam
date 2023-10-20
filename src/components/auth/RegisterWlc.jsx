@@ -1,24 +1,15 @@
-import BgReg from "../assets/splash.jpg";
+import BgReg from "../../assets/splash.jpg";
 import { useTheme } from "@emotion/react";
 import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
+import { WelcomComp } from "../../styles/auth";
 
 function RegisterWlc() {
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
+
   return (
-    <Paper
-      sx={{
-        borderRadius: "0 20px 20px 0",
-        width: "100%",
-        overflow: "hidden",
-        position: "relative",
-        flexGrow: 1,
-      }}
-      item
-      square
-      elevation={4}
-    >
+    <WelcomComp item square elevation={4}>
       <img
         alt="ee"
         src={BgReg}
@@ -46,7 +37,7 @@ function RegisterWlc() {
           Welcome to examQuiz
         </Typography>
       </Box>
-    </Paper>
+    </WelcomComp>
   );
 }
 

@@ -1,16 +1,16 @@
 import { Stack } from "@mui/material";
 import React from "react";
 import useDataFetcher from "../../hooks/useDataFetcher";
-import CircularColor from "../../components/loading";
-import NoContent from "../../components/NoContent";
-import ExamName from "../../components/ExamName";
-import Layout from "../../components/Layout";
+import CircularColor from "../../components/common/loading";
+import NoContent from "../../components/common/NoContent";
+import ExamName from "../../components/teacher/ExamName";
+import Layout from "../../components/common/Layout";
 import { useNavigate } from "react-router-dom";
-import SubmitButt from "../../components/SubmitButt";
+import SubmitButt from "../../components/common/SubmitButt";
 
 function Exams() {
   const { data, isLoading, error } = useDataFetcher(
-    "http://localhost:5000/topics"
+    process.env.REACT_APP_EXAMS
   );
   const navigate = useNavigate();
   const handleChange = (vl) => {

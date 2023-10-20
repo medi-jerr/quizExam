@@ -18,3 +18,15 @@ export const elment = {
   position: "relative",
   overflow: "hidden",
 };
+export const wv = {
+  position: "absolute",
+  bottom: "0px",
+  left: "-10%",
+  zIndex: 1,
+};
+export const wnT = {
+  position: "absolute",
+  zIndex: 100,
+  bottom: "0px",
+  left: 0,
+};

@@ -1,18 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../components/common/Layout";
 import useDataFetcher from "../../hooks/useDataFetcher";
-import StudentsNotes from "../../components/StudentsNotes";
-import { convertUserToArra } from "../../functions/studentNotes";
+import StudentsNotes from "../../components/common/StudentsNotes";
 import moment from "moment";
 import { Navigate, useLocation } from "react-router-dom";
 
 function StNotes() {
-  const [tableContentsTitle, setTbCtTl] = useState(["Name", "Exam", "Date"]);
+  const [tableContentsTitle] = useState(["Name", "Exam", "Date"]);
   const [tablOb, setTabOb] = useState([]);
-  const [tableKeys, setTableKeys] = useState(["name", "exam", "date", "note"]);
+  const [tableKeys] = useState(["name", "exam", "date", "note"]);
   const { state } = useLocation();
 
-  const { data } = useDataFetcher("http://localhost:5000/students");
+  const { data } = useDataFetcher(process.env.REACT_APP_STUDENTS);
 
   useEffect(() => {
     if (data) {

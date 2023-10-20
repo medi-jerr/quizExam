@@ -1,71 +1,90 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../components/Layout";
-import {
-  Avatar,
-  Box,
-  Button,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
+import Layout from "../../components/common/Layout";
+import { Avatar, Box, Button } from "@mui/material";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import { list, numOfNotif, panelControl } from "../../styledCore/account";
+import { list, numOfNotif, panelControl } from "../../styles/account";
 import axios from "axios";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import moment from "moment/moment";
-import { useUser } from "../../functions/UserContext";
+import { useUser } from "../../contexts/UserContext";
 import { Navigate, useNavigate } from "react-router-dom";
-import StudentsNotes from "../../components/StudentsNotes";
+import StudentsNotes from "../../components/common/StudentsNotes";
+import ListNotification from "../../components/common/ListNotification";
+import CircularColor from "../../components/common/loading";
+import env from "react-dotenv";
 
 function Account() {
   const [showNotif, setShowNotif] = useState(false);
-  const [exams, setExams] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [exist, setExist] = useState([]);
   const [scores, setScores] = useState([]);
-  const [tableKeys, setTableKeys] = useState(["exam", "date", "note"]);
-  const [tableContentsTitle, setTbCtTl] = useState(["Exam", "Date"]);
+  const [tableKeys] = useState(["exam", "date", "note"]);
+  const [tableContentsTitle] = useState(["Exam", "Date"]);
+  const [storedUser, setStoredUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [topicUrl] = useState(process.env.REACT_APP_EXAMS);
 
   const navigate = useNavigate();
   let { user, setUser } = useUser();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/topics")
-      .then((res) => {
-        setExams(res.data);
-        findTestByStudentId(res.data, user.id);
-      })
-      .catch((er) => setErrorMessage(er.message));
-    if (user && user.scores) {
-      convertUserToArra(user.scores);
+    const userStored = sessionStorage.getItem("user");
+    const userStoredOb = userStored && JSON.parse(userStored);
+
+    setStoredUser(userStoredOb);
+    if (user || userStoredOb) {
+      axios
+        .get(topicUrl)
+        .then((res) => {
+          findTestByStudentId(
+            res.data,
+            (user || userStoredOb).id,
+            userStoredOb
+          );
+        })
+        .catch((er) => {
+          setErrorMessage(er.message);
+          if (er.response) {
+            console.log(er.response.data);
+          }
+          if (er.request) {
+            console.log(er.request);
+          } else {
+            console.log(er.message);
+          }
+        });
+      if ((user || userStoredOb) && (user || userStoredOb).scores) {
+        convertUserToArra((user || userStoredOb).scores);
+      }
     }
-  }, []);
-  if (!user) {
+    setLoading(false);
+  }, [user]);
+  if (loading) {
+    return <CircularColor />;
+  }
+
+  if (!user && !storedUser) {
     return <Navigate to={"/login"} replace />;
   }
   const handeNotif = () => {
     exist.length > 0 && setShowNotif(!showNotif);
   };
-  function findTestByStudentId(tests, studentId) {
+  function findTestByStudentId(tests, studentId, stdUser) {
     let theTesterObj = [];
     for (const test of tests) {
       if (
         test.students.includes(studentId) &&
-        typeof user["scores"][test.name] !== "object"
+        typeof stdUser["scores"][test.name] !== "object"
       ) {
         theTesterObj = [...theTesterObj, test];
       }
     }
-
     setExist(theTesterObj);
   }
 
   const handleLogout = () => {
     setUser(null);
+    sessionStorage.clear();
+    navigate("/login");
   };
   const startTest = (id) => {
     navigate("/student/test", { state: id });
@@ -88,23 +107,30 @@ function Account() {
         result.push(newObj);
       }
     }
-
     setScores(result);
   }
 
   return (
     <Box sx={{ position: "relative" }}>
-      <Box sx={{ position: "absolute", top: 0, left: 0, m: "30px 100px 0" }}>
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          m: "30px 100px 0",
+          display: { sm: "none", lg: "block", xs: "none" },
+        }}
+      >
         <Box variant="h6" display={"flex"} alignItems={"center"} gap={1}>
           <Avatar
-            src="https://picsum.photos/200/300"
+            src="https://i.ibb.co/MG8PFFh/22-223941-transparent-avatar-png-male-avatar-icon-transparent-png.png"
             sx={{
               width: 30,
               height: 30,
               border: "5px solid #fff",
             }}
           ></Avatar>
-          {user.name}
+          {(user || storedUser).name}
         </Box>
       </Box>
       <Box sx={panelControl}>
@@ -117,32 +143,12 @@ function Account() {
             {exist.length}
           </Box>
           {exist.length > 0 && showNotif && (
-            <List sx={list}>
-              {exist && exist.length ? (
-                exist.map((item) => (
-                  <ListItem key={item.id} onClick={() => startTest(item.id)}>
-                    <ListItemAvatar>
-                      <Avatar>
-                        <MenuBookIcon />
-                      </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText
-                      primary={item.name}
-                      secondary={moment(item.id).format("MM/DD/YYYY")}
-                    />
-                  </ListItem>
-                ))
-              ) : (
-                <ListItem>
-                  <ListItemAvatar>
-                    <Avatar>
-                      <SentimentVeryDissatisfiedIcon />
-                    </Avatar>
-                  </ListItemAvatar>
-                  <ListItemText primary={errorMessage} />
-                </ListItem>
-              )}
-            </List>
+            <ListNotification
+              list={list}
+              exist={exist}
+              startTest={startTest}
+              errorMessage={errorMessage}
+            />
           )}
         </Box>
         <Button onClick={handleLogout}>Logout</Button>

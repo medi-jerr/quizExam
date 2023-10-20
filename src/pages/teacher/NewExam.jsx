@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState } from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../components/common/Layout";
 import {
   Box,
   Button,
@@ -12,7 +12,7 @@ import {
 import { QuestionMark } from "@mui/icons-material";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import SubmitButt from "../../components/SubmitButt";
+import SubmitButt from "../../components/common/SubmitButt";
 
 function NewExam() {
   // *********
@@ -43,10 +43,7 @@ function NewExam() {
     setQuestions(temp);
     setNewText("");
     setNewOptions(["", "", "", ""]);
-    console.log("lllll", questions);
   }, [newOptions, newText, questions]);
-
-  console.log(questions);
 
   const handleTextChange = (e) => {
     setNewText(e.target.value);
@@ -137,7 +134,6 @@ function NewExam() {
                 </Grid>
               ))}
             </Grid>
-            {/* <button onClick={handleCreateQuestions}>klick here</button> */}
           </Grid>
         ))}
       </Box>

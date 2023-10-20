@@ -2,7 +2,6 @@ import {
   Account,
   Exam,
   Exams,
-  NewExam,
   StExam,
   StLogin,
   StNotes,
@@ -12,6 +11,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./styles/theme";
 import CreateExam from "./pages/teacher/CreateExam";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
               <Route path="/teacher/notes" element={<StNotes />} />
               <Route path="/register" element={<StRegister />} />
               <Route path="/account" element={<Account />} />
-              <Route path="*" element={<p>There's nothing here: 404!</p>} />
+              <Route path="*" element={<Error />} />
             </Route>
           </Routes>
         </Router>

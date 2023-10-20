@@ -7,6 +7,7 @@ export const list = {
   boxShadow: "0 0 3px rgba(0,0,0,0.5)",
   zIndex: 9999,
   transform: "translate(-60%)",
+
   "&:after": {
     content: '""',
     top: "-17px",
@@ -37,8 +38,8 @@ export const panelControl = {
   position: "absolute",
   top: 0,
   right: 0,
-  m: "30px 100px 0",
+  marginTop: "30px",
   display: "flex",
   alignItems: "center",
-  gap: 2,
+  marginRight: { lg: "100px", xs: "10px" },
 };

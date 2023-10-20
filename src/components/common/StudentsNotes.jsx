@@ -7,8 +7,8 @@ import Paper from "@mui/material/Paper";
 import { Button, Typography } from "@mui/material";
 import { DownloadTableExcel } from "react-export-table-to-excel";
 import FilterListIcon from "@mui/icons-material/FilterList";
-import { StyledTableCell } from "../styledCore/table";
-import { btn } from "../styledCore/buttonS";
+import { StyledTableCell } from "../../styles/table";
+import { btn } from "../../styles/buttonS";
 import TableBodyCom from "./TableBodyCom";
 
 function StudentsNotes({ title, tbct, data, notes, tableKeys }) {
@@ -31,7 +31,7 @@ function StudentsNotes({ title, tbct, data, notes, tableKeys }) {
         {title}
       </Typography>
       <TableContainer component={Paper} sx={{ mb: 2 }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table" ref={tableRef}>
+        <Table ref={tableRef}>
           <TableHead>
             <TableRow>
               {tbct.map((it) => (

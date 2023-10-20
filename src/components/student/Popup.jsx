@@ -1,25 +1,15 @@
 import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
-import { pp, elment } from "../styledCore/popupStyle";
-import WaveImage from "../assets/wave.svg";
-import WaveImageT from "../assets/waveT.svg";
-import { useTheme } from "@mui/material/styles";
-import { btn } from "../styledCore/buttonS";
+import { pp, elment, wv, wnT } from "../../styles/popupStyle";
+import WaveImage from "../../assets/wave.svg";
+import WaveImageT from "../../assets/waveT.svg";
+import { styled, useTheme } from "@mui/material/styles";
+import { btn } from "../../styles/buttonS";
+import { CSSTransition } from "react-transition-group";
 
-function Popup({ calbackfun, username }) {
+function Popup({ calbackfun, username, showPopup }) {
   const theme = useTheme();
-  const wv = {
-    position: "absolute",
-    bottom: "0px",
-    left: "-10%",
-    zIndex: 1,
-  };
-  const wnT = {
-    position: "absolute",
-    zIndex: 100,
-    bottom: "0px",
-    left: 0,
-  };
+
   return (
     <Box sx={pp}>
       <Box sx={elment}>

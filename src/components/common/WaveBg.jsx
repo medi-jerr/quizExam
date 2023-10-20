@@ -1,6 +1,6 @@
 import React from "react";
-import WaveImage from "../assets/wave.svg";
-import WaveImageT from "../assets/waveT.svg";
+import WaveImage from "../../assets/wave.svg";
+import WaveImageT from "../../assets/waveT.svg";
 import { Box } from "@mui/material";
 
 function WaveBg() {

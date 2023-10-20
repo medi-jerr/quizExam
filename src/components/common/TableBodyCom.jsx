@@ -1,5 +1,4 @@
 import { TableBody, TableCell, TableRow } from "@mui/material";
-import moment from "moment";
 import React from "react";
 
 function TableBodyCom({ data, editMode, tableKeys }) {
