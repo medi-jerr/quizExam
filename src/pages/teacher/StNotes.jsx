@@ -12,7 +12,7 @@ function StNotes() {
   const { state } = useLocation();
 
   const { data } = useDataFetcher(process.env.REACT_APP_STUDENTS);
-
+  console.log(data);
   useEffect(() => {
     if (data) {
       let stpassExam = data.filter(

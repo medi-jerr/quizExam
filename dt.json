@@ -5,7 +5,11 @@
       "duration": "1",
       "name": "exam1",
       "id": 1696790697431,
-      "students": [1697026730599, 1697102371218, 22],
+      "students": [
+        1697026730599,
+        1697102371218,
+        22
+      ],
       "questions": [
         {
           "id": 0,
@@ -21,13 +25,23 @@
         {
           "id": 1,
           "text": "Which planet is known as the \"Red Planet\"?",
-          "options": ["Venus", "Jupiter", "Mars", "Saturn"],
+          "options": [
+            "Venus",
+            "Jupiter",
+            "Mars",
+            "Saturn"
+          ],
           "correctAnswer": "Jupiter"
         },
         {
           "id": 2,
           "text": "What is the capital of France?",
-          "options": ["London", "Berlin", "Madrid", "Paris"],
+          "options": [
+            "London",
+            "Berlin",
+            "Madrid",
+            "Paris"
+          ],
           "correctAnswer": "Paris"
         }
       ]
@@ -41,17 +55,25 @@
         {
           "id": 0,
           "text": "sdfsdq",
-          "options": ["qf", "qf"],
+          "options": [
+            "qf",
+            "qf"
+          ],
           "correctAnswer": "qf"
         },
         {
-          "options": ["qfsf", "qsfqfd"],
+          "options": [
+            "qfsf",
+            "qsfqfd"
+          ],
           "id": 1,
           "text": "fqs",
           "correctAnswer": "qfsf"
         }
       ],
-      "students": [22]
+      "students": [
+        22
+      ]
     },
     {
       "name": "testing students choice",
@@ -62,17 +84,28 @@
         {
           "id": 0,
           "text": "dfdfdf",
-          "options": ["dfdf", "fd", "df"],
+          "options": [
+            "dfdf",
+            "fd",
+            "df"
+          ],
           "correctAnswer": "dfdf"
         },
         {
           "id": 1,
           "text": "dfdf",
-          "options": ["dfd", "ggg", "gg"],
+          "options": [
+            "dfd",
+            "ggg",
+            "gg"
+          ],
           "correctAnswer": "ggg"
         }
       ],
-      "students": [22, 1697102371218]
+      "students": [
+        22,
+        1697102371218
+      ]
     },
     {
       "name": "jqsdjkd",
@@ -81,7 +114,11 @@
       "id": 1697671444834,
       "questions": [
         {
-          "options": ["dsg", "sdfg", "fdg"],
+          "options": [
+            "dsg",
+            "sdfg",
+            "fdg"
+          ],
           "id": 0,
           "text": "dfg",
           "correctAnswer": "sdfg"
@@ -89,23 +126,84 @@
         {
           "id": 1,
           "text": "gfds",
-          "options": ["dfsg", "fgds", "fgsd"],
+          "options": [
+            "dfsg",
+            "fgds",
+            "fgsd"
+          ],
           "correctAnswer": "fgds"
         },
         {
-          "options": ["dhfds", "sqdfsq", "dqsf"],
+          "options": [
+            "dhfds",
+            "sqdfsq",
+            "dqsf"
+          ],
           "id": 2,
           "text": "gfge",
           "correctAnswer": "dhfds"
         },
         {
-          "options": ["dfsg", "fdg", "dsgf"],
+          "options": [
+            "dfsg",
+            "fdg",
+            "dsgf"
+          ],
           "correctAnswer": "fdg",
           "id": 3,
           "text": "dfgs"
         }
       ],
-      "students": [1697102371218, 22]
+      "students": [
+        1697102371218,
+        22
+      ]
+    },
+    {
+      "name": " correct answer test ",
+      "duration": "3",
+      "nm_of_questions": "3",
+      "options": "4",
+      "id": 1698165481557,
+      "students": [
+        22,
+        1698164481452
+      ],
+      "questions": [
+        {
+          "id": 0,
+          "text": "who...",
+          "options": [
+            "t",
+            "f",
+            "null",
+            "false"
+          ],
+          "correctAnswer": "t"
+        },
+        {
+          "id": 1,
+          "text": "where...",
+          "options": [
+            "in",
+            "on ",
+            "there",
+            "here true"
+          ],
+          "correctAnswer": "here true"
+        },
+        {
+          "id": 2,
+          "text": "how hejfdjdsjfjkgfj",
+          "options": [
+            "op",
+            "true input",
+            "sdsqf",
+            "vsdhf"
+          ],
+          "correctAnswer": "true input"
+        }
+      ]
     }
   ],
   "students": [
@@ -172,8 +270,18 @@
         "testing students choice": {
           "date": 1697814818354,
           "note": "100.00%"
+        },
+        " correct answer test ": {
+          "date": 1698165645258,
+          "note": "66.67%"
         }
       }
+    },
+    {
+      "name": "user2",
+      "password": "qsdf",
+      "id": 1698164481452,
+      "scores": {}
     }
   ]
 }

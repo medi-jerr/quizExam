@@ -9,12 +9,17 @@ function StRegister() {
   const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
 
-  const registerUser = (ob) => {
+  const registerUser = (e, ob) => {
+    e.preventDefault();
     validationSchema
       .validate(ob, { abortEarly: false })
       .then(() => {
         axios
-          .post(process.env.REACT_APP_STUDENTS, { ...ob, id: Date.now() })
+          .post(process.env.REACT_APP_STUDENTS, {
+            ...ob,
+            id: Date.now(),
+            scores: {},
+          })
           .then((res) => console.log(res.data))
           .catch((er) => console.log(er.massage));
 

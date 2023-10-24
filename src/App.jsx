@@ -12,6 +12,7 @@ import theme from "./styles/theme";
 import CreateExam from "./pages/teacher/CreateExam";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Error from "./pages/Error";
+import CreateTest from "./pages/teacher/CreateTest";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
               <Route path="/" element={<Exams />} />
               <Route path="/teacher/exam" element={<Exam />} />
               <Route path="/student/test" element={<StExam />} />
-              <Route path="/teacher/add" element={<CreateExam />} />
+              <Route path="/teacher/add" element={<CreateTest />} />
               <Route path="/teacher/notes" element={<StNotes />} />
               <Route path="/register" element={<StRegister />} />
               <Route path="/account" element={<Account />} />

@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React from "react";
 import useDataFetcher from "../../hooks/useDataFetcher";
 import CircularColor from "../../components/common/loading";
@@ -19,10 +19,17 @@ function Exams() {
   const handleStudents = (exname) => {
     navigate("/teacher/notes", { state: exname });
   };
+
   if (isLoading) {
     return <CircularColor />;
   }
-
+  if (error) {
+    return (
+      <Layout>
+        <Typography variant="h4">{error}...</Typography>
+      </Layout>
+    );
+  }
   return (
     <Layout>
       {data.length ? (

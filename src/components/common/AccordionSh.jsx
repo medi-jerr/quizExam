@@ -5,7 +5,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Paper,
   Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -14,10 +13,6 @@ const RightAns = styled(Box)(({ theme }) => ({
   border: `3px solid ${theme.palette.primary.main}`,
 }));
 
-// {
-//   color: theme.palette.primary.main
-
-// }
 function AccordionShape({ element }) {
   return (
     <Accordion>
