@@ -10,7 +10,6 @@ import { Navigate, useNavigate } from "react-router-dom";
 import StudentsNotes from "../../components/common/StudentsNotes";
 import ListNotification from "../../components/common/ListNotification";
 import CircularColor from "../../components/common/loading";
-import env from "react-dotenv";
 
 function Account() {
   const [showNotif, setShowNotif] = useState(false);

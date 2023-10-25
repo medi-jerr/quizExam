@@ -204,6 +204,49 @@
           "correctAnswer": "true input"
         }
       ]
+    },
+    {
+      "name": "test3",
+      "duration": "2",
+      "nm_of_questions": "3",
+      "options": "3",
+      "id": 1698181965164,
+      "students": [
+        22,
+        1698164481452
+      ],
+      "questions": [
+        {
+          "id": 0,
+          "text": "kljsjfdkqsj hglkqsf hqfd goiej dffzhri",
+          "options": [
+            "hrtsd",
+            "hre ",
+            "true"
+          ],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 1,
+          "text": "jed ",
+          "options": [
+            "kjfg",
+            "gfer",
+            "jkb"
+          ],
+          "correctAnswer": "jkb"
+        },
+        {
+          "id": 2,
+          "text": "jltye klj ",
+          "options": [
+            "knt",
+            "kjer",
+            "jtgkr"
+          ],
+          "correctAnswer": "knt"
+        }
+      ]
     }
   ],
   "students": [
@@ -274,6 +317,10 @@
         " correct answer test ": {
           "date": 1698165645258,
           "note": "66.67%"
+        },
+        "test3": {
+          "date": 1698224207061,
+          "note": "33.33%"
         }
       }
     },
@@ -281,7 +328,12 @@
       "name": "user2",
       "password": "qsdf",
       "id": 1698164481452,
-      "scores": {}
+      "scores": {
+        " correct answer test ": {
+          "date": 1698182146499,
+          "note": "66.67%"
+        }
+      }
     }
   ]
 }
